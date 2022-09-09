@@ -63,20 +63,24 @@ void ULListStr::push_front(const std::string& val) {
 void ULListStr::pop_front() { 
 
     // @summary Remove item at front of list
-    head_ = head_->next;
-    delete head_->prev;
-    head_->prev = NULL;
-    size_--;
+    if(!this->empty()) { 
+        head_ = head_->next;
+        delete head_->prev;
+        head_->prev = NULL;
+        size_--;
+    }
   
 }
 
 void ULListStr::pop_back() {
 
     // @summary Remove item at end of list
-    tail_ = tail_->prev;
-    delete tail_->next;
-    tail_->next = NULL;
-    size_--;
+    if(!this->empty()) { 
+        tail_ = tail_->prev;
+        delete tail_->next;
+        tail_->next = NULL;
+        size_--;
+    }
 }
 
 std::string const& ULListStr::front() const { return head_->val[0]; }
