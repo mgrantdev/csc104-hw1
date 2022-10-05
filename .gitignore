@@ -1,3 +1,6 @@
 # VS Code proj files
 .vscode/
 a.out
+grade_ulliststr.sh
+grade_ulliststr.cpp
+grade_ulliststr
